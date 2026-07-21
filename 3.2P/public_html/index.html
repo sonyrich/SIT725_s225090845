@@ -1,0 +1,138 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>My Portfolio | SIT725 3.2P</title>
+    <meta name="description" content="Welcome to my portfolio!" />
+    <meta name="author" content="sonyrich" />
+
+    <meta property="og:title" content="SIT725 3.2P" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Welcome to my portfolio!" />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+
+    <!-- Custom Style Sheet-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="teal darken-2">
+      <div class="nav-wrapper navbar-size">
+        <a href="#" class="brand-logo">
+          <i class="material-icons">code</i> My Portfolio
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a target="_blank" href="https://github.com/sonyrich">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- about -->
+    <div class="main-body section" id="about">
+      <div class="container center-align">
+        <h3>Hi, I'm Sony 👋</h3>
+        <p class="flow-text">
+          A passionate Back-end developer based from Ho Chi Minh, Viet Nam. I
+          love building clean, functional web apps.
+        </p>
+        <button
+          class="btn waves-effect waves-light click-me-button"
+          onclick="clickMe()">
+          Say Hello <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+
+    <!-- banner -->
+    <div class="container center-align" style="margin-top: 40px">
+      <img
+        class="materialboxed materialboxed-image responsive-img rounded"
+        src="images/hero.jpg"
+        alt="Developer workspace" />
+    </div>
+
+    <!-- projects -->
+    <div class="container section" id="projects">
+      <h4 class="center-align teal-text darken-2">My Projects</h4>
+      <div class="row" id="project-cards">
+        <!-- cards loaded by scripts.js via /api/projects -->
+      </div>
+    </div>
+
+    <!-- contacts - modal -->
+    <div class="container section" id="contact">
+      <h4 class="center-align teal-text darken-2">Get In Touch</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" placeholder="Sony" />
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" placeholder="Rich" />
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="email"
+                type="email"
+                placeholder="sony.rich@example.com" />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea
+                id="note"
+                class="materialize-textarea"
+                placeholder="Your message here..."></textarea>
+              <label for="note">Leave a Note</label>
+            </div>
+          </div>
+          <button
+            class="btn waves-effect waves-light teal darken-2"
+            type="button"
+            onclick="submitForm()">
+            Send Message <i class="material-icons right">email</i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- toast notification -->
+    <div id="toast-container"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      defer></script>
+
+    <!-- Custom Script -->
+    <script src="js/scripts.js" defer></script>
+  </body>
+</html>
